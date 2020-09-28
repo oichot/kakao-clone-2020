@@ -1,3 +1,3 @@
-# kakao clone 2020
+# kokoa clone oichot
 
 HTML & CSS Study Start!
