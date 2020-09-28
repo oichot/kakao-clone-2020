@@ -1,3 +1,3 @@
 # kakao clone 2020
 
-HTML CSS Study!
+HTML & CSS Study Start!
