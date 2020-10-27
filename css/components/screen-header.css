@@ -1,0 +1,42 @@
+.screen-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--horizontal-space);
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.screen-header__title {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--green);
+}
+
+.screen-header__icons {
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+
+.screen-header__icons .fa-comment-medical,
+.screen-header__icons .fa-qrcode {
+  font-size: 22px;
+}
+
+.screen-header__icons span {
+  margin-left: 10px;
+}
+
+@keyframes RCog {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(1turn);
+  }
+}
+
+.screen-header__icons .cog-more:hover {
+  animation: RCog 2s linear infinite both;
+}

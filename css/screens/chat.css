@@ -1,0 +1,375 @@
+#chat-screen {
+  background-color: (white);
+  height: 120vh;
+}
+
+.alt-header__column span:last-child {
+  margin-left: 20px;
+}
+
+#chat-screen .status-bar {
+  z-index: 2;
+}
+
+#chat-screen .alt-header,
+#chat-screen .status-bar {
+  top: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+#chat-screen .alt-header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+#chat-screen .alt-header {
+  top: 25px;
+}
+
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.main-chat {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: FadeIn 0.4s linear;
+}
+
+.chat__timestamp {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 12px 15px;
+  border-radius: 24px;
+  font-size: 12px;
+}
+
+.message-row,
+.message-row-second {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.message-row-second {
+  animation: FadeInMessage 0.3s ease-in-out backwards;
+  animation-delay: 3.4s;
+  position: relative;
+}
+
+@keyframes FadeInMessage {
+  from {
+    transform: scale(0);
+    transform-origin: top left;
+  }
+  to {
+    transform: scale(1);
+    transform-origin: top left;
+  }
+}
+
+@keyframes FadeInOutMessage {
+  0% {
+    transform: scale(1);
+    transform-origin: top left;
+  }
+  90% {
+    transform: scale(1);
+    transform-origin: top left;
+  }
+  100% {
+    transform: scale(0);
+    transform-origin: top left;
+  }
+}
+
+.message-row img,
+.message-row-second img {
+  width: 40px;
+  height: 40px;
+  border-radius: 35%;
+  margin-right: 10px;
+}
+
+.message__author {
+  margin-bottom: 8px;
+  display: block;
+  font-size: 12px;
+}
+
+.message__author,
+.message__time {
+  opacity: 0.8;
+}
+
+.message__bubble,
+.message__bubble-second {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 12px 16px;
+  border-radius: 0px 32px 32px;
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.message__bubble__dots {
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 50px;
+  height: 40px;
+  padding: 12px 16px;
+  border-radius: 0px 32px 32px;
+  font-size: 18px;
+  position: absolute;
+  top: 15;
+  left: 15;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: FadeInOutMessage 1.5s ease-in-out both;
+  animation-delay: 3s;
+}
+
+@keyframes HideLS-Dots--caht {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.message__bubble__dots div {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--green);
+  animation: HideLS-Dots--caht 0.6s ease-in 3;
+  animation-delay: 3.1s;
+}
+
+.message__bubble__dots div:nth-child(2) {
+  animation-delay: 3.2s;
+}
+.message__bubble__dots div:nth-child(3) {
+  animation-delay: 3.3s;
+}
+
+.message__info,
+.message__info-second {
+  display: flex;
+  align-items: flex-end;
+}
+
+.message__info-second {
+  animation: FadeInMessage 0.3s ease-in-out backwards;
+  animation-delay: 4.4s;
+}
+
+.message__time {
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.message-row--own {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.message__info--own {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  animation: FadeInMessage--own 0.3s ease-in-out backwards;
+  animation-delay: 1.8s;
+}
+
+@keyframes FadeInMessage--own {
+  from {
+    transform: scale(0);
+    transform-origin: top right;
+  }
+  to {
+    transform: scale(1);
+    transform-origin: top right;
+  }
+}
+
+@keyframes FadeInOutMessage--own {
+  0% {
+    transform: scale(0);
+    transform-origin: top right;
+  }
+  25% {
+    transform: scale(1);
+    transform-origin: top right;
+  }
+  90% {
+    transform: scale(1);
+    transform-origin: top right;
+  }
+  100% {
+    transform: scale(0);
+    transform-origin: top right;
+  }
+}
+
+.message__bubble--own {
+  padding: 12px 16px;
+  font-size: 18px;
+  background-color: var(--green);
+  border-radius: 32px 0px 32px 32px;
+  margin-right: 0px;
+  margin-left: 5px;
+  color: white;
+}
+
+.message__bubble--own__dots {
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 50px;
+  height: 40px;
+  padding: 12px 16px;
+  border-radius: 32px 0px 32px 32px;
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: FadeInOutMessage--own 1.4s ease-in-out both;
+  animation-delay: 0.5s;
+}
+
+.message__bubble--own__dots div {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--green);
+  animation: HideLS-Dots--caht 0.5s ease-in 2;
+  animation-delay: 0.6s;
+}
+
+.message__bubble--own__dots div:nth-child(2) {
+  animation-delay: 0.7s;
+}
+.message__bubble--own__dots div:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+/** another way
+ .message-row--own .message__bubble {
+  order: 1;
+}
+.message-row--own .message__time {
+  order: 0;
+} **/
+
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+  align-items: center;
+  animation: FadeIn 0.4s linear;
+}
+
+.reply i:not(.fa-arrow-up) {
+  opacity: 0.5;
+}
+
+.reply__column:first-child {
+  width: 10%;
+}
+
+.reply__column:nth-child(2) {
+  width: 82%;
+  position: relative;
+}
+
+.reply__column:last-child {
+  width: 8%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.reply input {
+  padding: 16px 20px;
+  width: 100%;
+  border: var(--main-border);
+  border-radius: 32px;
+}
+
+.reply__column:first-child i {
+  font-size: 35px;
+}
+
+.reply__column:last-child i {
+  font-size: 35px;
+}
+
+.reply__column:nth-child(2) > i,
+.reply__column:nth-child(2) button {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+}
+
+.reply__column:nth-child(2) > i {
+  right: 65px;
+  top: 16px;
+  font-size: 25px;
+}
+
+.reply__column button {
+  background-color: var(--green);
+  border: none;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+}
+
+.reply__column button i {
+  font-size: 22px;
+  color: white;
+}
+
+.reply,
+.reply input,
+.fa-microphone,
+.fa-smile-wink,
+.reply__column button {
+  transition: all 0.3s ease-in-out;
+}
+
+.reply:focus-within .fa-microphone {
+  opacity: 0;
+  transform: translateY(80px);
+}
+
+.reply:focus-within input {
+  width: 110%;
+}
+
+.reply:focus-within .fa-smile-wink,
+.reply:focus-within button {
+  transform: translateX(47px);
+}

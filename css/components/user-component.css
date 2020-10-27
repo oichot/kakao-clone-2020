@@ -1,0 +1,121 @@
+.user-component {
+  transition: 0.2s ease-in-out;
+}
+.user-component:hover {
+  transform: scale(1.02);
+}
+
+.user-component {
+  justify-content: space-between;
+  border-radius: 28px;
+}
+
+.user-component,
+.user-component__column:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.user-component__avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 42%;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--green);
+}
+
+.user-component__avatar i {
+  font-size: 26px;
+  color: white;
+}
+
+.user-component__title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.user-component__subtitle {
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.user-component__avatar--xl {
+  width: 80px;
+  height: 80px;
+}
+
+.user-component__avatar--sm {
+  border-radius: 42%;
+  margin-right: 20px;
+  width: 55px;
+  height: 55px;
+}
+
+.user-component__title--not-bold {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.user-component__column:last-child {
+  color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.user-component .fa-comment-alt {
+  color: var(--green);
+}
+
+.user-component__column:last-child span {
+  font-size: 14px;
+}
+
+.user-component__column-more {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.user-component__text {
+  width: 70px;
+  padding: 10px;
+  border: var(--main-border);
+  border-radius: 20px;
+  align-items: center;
+  text-align: center;
+  margin-left: 10px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-component__text i {
+  margin-right: 5px;
+  color: var(--green);
+}
+
+#user-component__column-melon {
+  color: var(--green-light);
+  display: flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 40px;
+  border: 1px solid var(--green-light);
+}
+
+#user-component__column-melon i {
+  margin-left: 8px;
+  font-size: 22px;
+}
+
+.user-component__time {
+  margin-bottom: 5px;
+  display: block;
+}

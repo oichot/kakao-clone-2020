@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.14.0/css/all.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to AloeTalk</title>
+  </head>
+  <body>
+    <!--Status Bar-->
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>18:43</span>
+        <i class="fas fa-location-arrow"></i>
+      </div>
+      <div class="status-bar__column">
+        <i class="fas fa-signal"></i>
+        <i class="fas fa-wifi"></i>
+        <i class="fas fa-battery-full fa-lg"></i>
+      </div>
+    </div>
+
+    <!--Welcome Header-->
+    <header class="welcome-header">
+      <h1 class="welcome-header__title">Welcome to AloeTalk</h1>
+      <p class="welcome-header__text">
+        If you have a AloeTalk Acount,<br />log in with your email or phone
+        number.
+      </p>
+    </header>
+
+    <!--Login Form-->
+    <form action="friends.html" method="get" id="login-form">
+      <input name="user name" type="text" placeholder="Email or phone number" />
+      <input name="password" type="password" placeholder="Password" />
+      <input type="submit" value="Log In" />
+      <input type="submit" value="Sign Up" />
+      <a href="#">Find Aloe Account or Password</a>
+    </form>
+
+    <!--Media Query-->
+    <div id="no-mobile">
+      <span>Your Screen is TOO BIG :(</span>
+    </div>
+  </body>
+</html>

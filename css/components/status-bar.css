@@ -1,0 +1,28 @@
+.status-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 25px;
+  color: black;
+}
+
+.status-bar__column {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.status-bar__column i {
+  margin-left: 8px;
+  font-size: 14px;
+}
+
+.status-bar__column .fa-location-arrow {
+  font-size: 4px;
+}
+
+.status-bar__column .fa-battery-full {
+  font-size: 18px;
+}

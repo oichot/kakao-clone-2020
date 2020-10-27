@@ -1,0 +1,108 @@
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f9f9fa;
+  padding: 20px 50px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+.nav__link {
+  position: relative;
+}
+.nav-colored {
+  color: var(--green);
+}
+
+/* Notif Animation */
+@keyframes NotifAni {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes NotifAniSecond {
+  0% {
+    transform: rotateZ(0);
+    transform-origin: bottom;
+  }
+  25% {
+    transform: rotateZ(-10deg);
+    transform-origin: bottom;
+  }
+  50% {
+    transform: rotateZ(10deg);
+    transform-origin: bottom;
+  }
+  75% {
+    transform: rotateZ(-5deg);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: rotateZ(0px);
+    transform-origin: bottom;
+  }
+}
+
+.nav__notification,
+.nav__notification2 {
+  left: 20px;
+  bottom: 12px;
+  position: absolute;
+}
+
+.nav__notification-more {
+  left: 28px;
+  bottom: 22px;
+  position: absolute;
+}
+
+.nav__notification2,
+.nav__notification-more {
+  animation: NotifAni 0.4s ease-in-out backwards 1,
+    NotifAniSecond 0.8s ease-in-out none infinite;
+  animation-delay: 1.6s, 2.2s;
+}
+
+.nav__notification,
+.nav__notification-more {
+  animation: NotifAniSecond 0.8s ease-in-out none infinite;
+}
+
+@keyframes appearBtnAni {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.nav__btn {
+  transform: translateY(80px);
+  opacity: 0;
+  animation: appearBtnAni 0.5s ease-in-out forwards;
+}
+
+.nav__btn:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.nav__btn:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.nav__btn:last-child {
+  animation-delay: 0.3s;
+}
